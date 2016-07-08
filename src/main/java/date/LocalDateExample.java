@@ -1,6 +1,7 @@
 package date;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -23,6 +24,10 @@ public class LocalDateExample {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         System.out.println(today.format(formatter));
+        
+        Period period = today.until(tomorrow);
+        System.out.println(period);
+        System.out.println(period.getDays());
 
     }
 }
